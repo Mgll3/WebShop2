@@ -29,7 +29,7 @@ public class UserController {
                     content = @Content(schema = @Schema(implementation = AthAnswerDTO.class)))
     })
     @GetMapping("/userSession")
-    public ResponseEntity<?> userSession(HttpServletRequest request) {
+    public ResponseEntity<AthAnswerDTO> userSession(HttpServletRequest request) {
         
         AthAnswerDTO answer = userService.getUserSession(request);
         return ResponseEntity.ok(answer);
@@ -56,7 +56,6 @@ public class UserController {
 
             return ResponseEntity.status(HttpStatus.CREATED).body("Usuario registrado correctamente!");
         } catch (Exception ex) {
-             System.out.println(ex.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).body(ex.getMessage());
         }
     }
@@ -74,7 +73,6 @@ public class UserController {
             AthAnswerDTO answer = userService.authenticate(LoginDto);
             return new ResponseEntity<>(answer, HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return new ResponseEntity<>(new AthAnswerDTO("Error al autenticar"), HttpStatus.UNAUTHORIZED);
         }
     }

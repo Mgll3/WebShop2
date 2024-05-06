@@ -30,7 +30,6 @@ public class DetalleProductoControlador {
                 return  ResponseEntity.ok(detalleProductoEncontrado);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         
@@ -46,7 +45,6 @@ public class DetalleProductoControlador {
                 return  ResponseEntity.status(HttpStatus.CREATED).body(detalleProductoGuardado);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build();
         } 
         
@@ -59,7 +57,7 @@ public class DetalleProductoControlador {
     @Parameter(name = "imagen3", description = "Imagen 3 que se va a guardar")
     @Parameter(name = "productoId", description = "Id del producto a la que se le van a asociar las imagenes")
     @PostMapping("/guardarImagenes")
-    public ResponseEntity<?> guardarImagen(
+    public ResponseEntity<Void> guardarImagen(
             @RequestParam("productoId") Long detalleId,
             @RequestParam("imagen1") MultipartFile imagen1,
             @RequestParam("imagen2") MultipartFile imagen2,
