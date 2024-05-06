@@ -1,4 +1,4 @@
-package com.webShop.back.modelo.Entidad;
+package com.webshop.back.modelo.Entidad;
 
 import jakarta.persistence.*;
 

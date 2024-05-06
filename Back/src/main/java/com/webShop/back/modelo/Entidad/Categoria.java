@@ -1,12 +1,12 @@
-package com.webShop.back.modelo.Entidad;
+package com.webshop.back.modelo.Entidad;
 
 
-
-import com.webShop.back.modelo.DTO.CategoriaDTO;
 
 import jakarta.persistence.*;
 
 import java.util.Set;
+
+import com.webshop.back.modelo.DTO.CategoriaDTO;
 
 import lombok.Getter;
 

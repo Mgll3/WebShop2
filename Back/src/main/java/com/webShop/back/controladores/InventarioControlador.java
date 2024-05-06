@@ -1,4 +1,4 @@
-package com.webShop.back.controladores;
+package com.webshop.back.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webShop.back.modelo.DTO.InventarioDTO;
-import com.webShop.back.modelo.Entidad.Inventario;
-import com.webShop.back.services.InventarioServices;
+import com.webshop.back.modelo.DTO.InventarioDTO;
+import com.webshop.back.modelo.Entidad.Inventario;
+import com.webshop.back.services.InventarioServices;
 
 @RestController
 @RequestMapping ("/inventario")
@@ -48,10 +48,10 @@ public class InventarioControlador {
     @DeleteMapping("/{id}")
     public ResponseEntity<InventarioDTO> eliminarPorId(@PathVariable Long id){
         Boolean inventarioEncontrado = inventarioServices.eliminarInventario(id);
-        if (inventarioEncontrado == false){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        } else {
+        if (inventarioEncontrado){
             return  ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 

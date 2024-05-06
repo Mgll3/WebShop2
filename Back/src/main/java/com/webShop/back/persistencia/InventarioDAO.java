@@ -1,8 +1,8 @@
-package com.webShop.back.persistencia;
+package com.webshop.back.persistencia;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.webShop.back.modelo.Entidad.Inventario;
+import com.webshop.back.modelo.Entidad.Inventario;
 
 public interface InventarioDAO extends JpaRepository<Inventario, Long>{
     

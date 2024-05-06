@@ -1,4 +1,4 @@
-package com.webShop.back.security;
+package com.webshop.back.security;
 
 public class ConstantSecurity {
 

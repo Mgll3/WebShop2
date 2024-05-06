@@ -1,14 +1,14 @@
-package com.webShop.back.modelo.Entidad;
+package com.webshop.back.modelo.Entidad;
 
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.webshop.back.modelo.DTO.ProductoDTO;
+
 import jakarta.persistence.*;
 import lombok.Data;
-
-import com.webShop.back.modelo.DTO.ProductoDTO;
 
 @Entity
 @Data

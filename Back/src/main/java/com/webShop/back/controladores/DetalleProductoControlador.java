@@ -1,4 +1,4 @@
-package com.webShop.back.controladores;
+package com.webshop.back.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.webShop.back.modelo.DTO.DetalleProductoDTO;
-import com.webShop.back.modelo.Entidad.DetalleProducto;
-import com.webShop.back.services.DetalleProductoServices;
+import com.webshop.back.modelo.DTO.DetalleProductoDTO;
+import com.webshop.back.modelo.Entidad.DetalleProducto;
+import com.webshop.back.services.DetalleProductoServices;
 
 import io.swagger.v3.oas.annotations.*;
 
@@ -30,7 +30,6 @@ public class DetalleProductoControlador {
                 return  ResponseEntity.ok(detalleProductoEncontrado);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         
@@ -46,7 +45,6 @@ public class DetalleProductoControlador {
                 return  ResponseEntity.status(HttpStatus.CREATED).body(detalleProductoGuardado);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build();
         } 
         
@@ -59,7 +57,7 @@ public class DetalleProductoControlador {
     @Parameter(name = "imagen3", description = "Imagen 3 que se va a guardar")
     @Parameter(name = "productoId", description = "Id del producto a la que se le van a asociar las imagenes")
     @PostMapping("/guardarImagenes")
-    public ResponseEntity<?> guardarImagen(
+    public ResponseEntity<Void> guardarImagen(
             @RequestParam("productoId") Long detalleId,
             @RequestParam("imagen1") MultipartFile imagen1,
             @RequestParam("imagen2") MultipartFile imagen2,

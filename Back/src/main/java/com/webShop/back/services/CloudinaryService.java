@@ -1,4 +1,4 @@
-package com.webShop.back.services;
+package com.webshop.back.services;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;

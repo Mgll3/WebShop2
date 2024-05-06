@@ -1,9 +1,6 @@
-package com.webShop.back.security;
+package com.webshop.back.security;
 
 
-import com.webShop.back.modelo.Entidad.User;
-import com.webShop.back.modelo.Entidad.UserType;
-import com.webShop.back.persistencia.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -11,6 +8,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import com.webshop.back.modelo.Entidad.User;
+import com.webshop.back.modelo.Entidad.UserType;
+import com.webshop.back.persistencia.UserRepository;
 
 import java.util.Collection;
 import java.util.Collections;

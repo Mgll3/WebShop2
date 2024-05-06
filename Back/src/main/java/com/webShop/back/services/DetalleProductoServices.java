@@ -1,4 +1,4 @@
-package com.webShop.back.services;
+package com.webshop.back.services;
 
 import java.util.Map;
 import java.util.Optional;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.webShop.back.modelo.DTO.DetalleProductoDTO;
-import com.webShop.back.modelo.Entidad.DetalleProducto;
-import com.webShop.back.modelo.Entidad.Image;
-import com.webShop.back.persistencia.DetalleProductoDAO;
+import com.webshop.back.modelo.DTO.DetalleProductoDTO;
+import com.webshop.back.modelo.Entidad.DetalleProducto;
+import com.webshop.back.modelo.Entidad.Image;
+import com.webshop.back.persistencia.DetalleProductoDAO;
 
 @Service
 public class DetalleProductoServices {

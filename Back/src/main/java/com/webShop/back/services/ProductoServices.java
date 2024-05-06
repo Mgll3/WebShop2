@@ -1,4 +1,4 @@
-package com.webShop.back.services;
+package com.webshop.back.services;
 
 import java.util.Optional;
 import java.util.List;
@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.webshop.back.modelo.DTO.ProductoDTO;
+import com.webshop.back.modelo.Entidad.*;
+import com.webshop.back.persistencia.ProductoDAO;
+
 import org.springframework.dao.DataAccessException;
-
-
-import com.webShop.back.modelo.DTO.ProductoDTO;
-import com.webShop.back.modelo.Entidad.*;
-import com.webShop.back.persistencia.ProductoDAO;
 
 @Service
 public class ProductoServices {
