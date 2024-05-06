@@ -1,6 +1,6 @@
-package com.webshop.back.modelo.DTO;
+package com.webShop.back.modelo.DTO;
 
-import com.webshop.back.modelo.Entidad.Image;
+import com.webShop.back.modelo.Entidad.Image;
 
 import lombok.Getter;
 

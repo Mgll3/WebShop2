@@ -1,5 +1,9 @@
-package com.webshop.back.controladores;
+package com.webShop.back.controladores;
 
+
+import com.webShop.back.modelo.DTO.ProductoDTO;
+import com.webShop.back.modelo.Entidad.Producto;
+import com.webShop.back.services.ProductoServices;
 
 import io.swagger.v3.oas.annotations.*;
 
@@ -9,10 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.webshop.back.modelo.DTO.ProductoDTO;
-import com.webshop.back.modelo.Entidad.Producto;
-import com.webshop.back.services.ProductoServices;
 
 @RestController
 @RequestMapping ("/producto")
@@ -52,6 +52,7 @@ public class ProductoControlador {
             return ResponseEntity.status(HttpStatus.CREATED).body(productoGuardado);
             
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build();
         }
         
@@ -72,6 +73,7 @@ public class ProductoControlador {
                 return  ResponseEntity.ok(productosEncontrados);
             }
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         
@@ -87,12 +89,13 @@ public class ProductoControlador {
     public ResponseEntity<ProductoDTO> eliminarProducto(@PathVariable Long id){
         try {
             Boolean productoEliminado = productoServices.eliminarProducto(id);
-            if (productoEliminado){
-                return ResponseEntity.noContent().build();
-            } else {
+            if (productoEliminado == false){
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            } else {
+                return  ResponseEntity.noContent().build();
             }
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         
@@ -103,7 +106,7 @@ public class ProductoControlador {
     @Parameter(name = "imagenPrincipal", description = "Imagen principal que se va a guardar")
     @Parameter(name = "productoId", description = "Id del producto a la que se le van a asociar las imagenes")
     @PostMapping("/guardarImagen")
-    public ResponseEntity<Void> guardarImagen(
+    public ResponseEntity<?> guardarImagen(
             @RequestParam("productoId") Long productoId,
             @RequestParam("imagenPrincipal") MultipartFile imagenPrincipal) {
         try {
@@ -113,6 +116,7 @@ public class ProductoControlador {
             return new ResponseEntity<>(HttpStatus.OK);
 
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
         }
     }

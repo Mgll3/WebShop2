@@ -1,8 +1,7 @@
-package com.webshop.back.persistencia;
+package com.webShop.back.persistencia;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.webshop.back.modelo.Entidad.DetalleProducto;
+import com.webShop.back.modelo.Entidad.DetalleProducto;
 
 public interface DetalleProductoDAO extends JpaRepository<DetalleProducto, Long> {
     

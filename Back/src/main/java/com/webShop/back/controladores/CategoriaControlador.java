@@ -1,4 +1,4 @@
-package com.webshop.back.controladores;
+package com.webShop.back.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webshop.back.modelo.DTO.CategoriaDTO;
-import com.webshop.back.modelo.Entidad.Categoria;
-import com.webshop.back.services.CategoriaServices;
+import com.webShop.back.modelo.DTO.CategoriaDTO;
+import com.webShop.back.modelo.Entidad.Categoria;
+import com.webShop.back.services.CategoriaServices;
 
 
 @RestController
@@ -48,10 +48,10 @@ public class CategoriaControlador {
     @DeleteMapping("/{id}")
     public ResponseEntity<CategoriaDTO> eliminarPorId(@PathVariable Long id){
         Boolean categoriaEncontrada = categoriaServices.eliminarCategoria(id);
-        if (categoriaEncontrada){
-            return  ResponseEntity.noContent().build();
-        } else {
+        if (categoriaEncontrada == false){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        } else {
+            return  ResponseEntity.noContent().build();
         }
     }
 }

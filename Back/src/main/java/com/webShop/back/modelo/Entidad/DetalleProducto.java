@@ -1,9 +1,10 @@
-package com.webshop.back.modelo.Entidad;
+package com.webShop.back.modelo.Entidad;
 
-
-import com.webshop.back.modelo.DTO.DetalleProductoDTO;
 
 import jakarta.persistence.*;
+
+import com.webShop.back.modelo.DTO.DetalleProductoDTO;
+
 import lombok.Data;
 
 @Entity

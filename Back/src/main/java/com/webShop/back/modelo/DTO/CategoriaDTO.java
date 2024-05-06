@@ -1,4 +1,4 @@
-package com.webshop.back.modelo.DTO;
+package com.webShop.back.modelo.DTO;
 
 
 import lombok.Getter;

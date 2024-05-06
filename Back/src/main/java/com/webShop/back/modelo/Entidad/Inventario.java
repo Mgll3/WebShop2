@@ -1,8 +1,9 @@
-package com.webshop.back.modelo.Entidad;
-
-import com.webshop.back.modelo.DTO.InventarioDTO;
+package com.webShop.back.modelo.Entidad;
 
 import jakarta.persistence.*;
+
+import com.webShop.back.modelo.DTO.InventarioDTO;
+
 import lombok.Getter;
 
 

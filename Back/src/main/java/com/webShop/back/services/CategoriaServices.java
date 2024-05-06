@@ -1,13 +1,13 @@
-package com.webshop.back.services;
+package com.webShop.back.services;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.webshop.back.modelo.DTO.CategoriaDTO;
-import com.webshop.back.modelo.Entidad.Categoria;
-import com.webshop.back.persistencia.CategoriaDAO;
+import com.webShop.back.modelo.DTO.CategoriaDTO;
+import com.webShop.back.modelo.Entidad.Categoria;
+import com.webShop.back.persistencia.CategoriaDAO;
 
 
 

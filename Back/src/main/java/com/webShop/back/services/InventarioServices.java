@@ -1,13 +1,13 @@
-package com.webshop.back.services;
+package com.webShop.back.services;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.webshop.back.modelo.DTO.InventarioDTO;
-import com.webshop.back.modelo.Entidad.Inventario;
-import com.webshop.back.persistencia.InventarioDAO;
+import com.webShop.back.modelo.DTO.InventarioDTO;
+import com.webShop.back.modelo.Entidad.Inventario;
+import com.webShop.back.persistencia.InventarioDAO;
 
 
 @Service

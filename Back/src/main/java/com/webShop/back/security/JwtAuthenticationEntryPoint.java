@@ -1,4 +1,4 @@
-package com.webshop.back.security;
+package com.webShop.back.security;
 
 
 import jakarta.servlet.ServletException;

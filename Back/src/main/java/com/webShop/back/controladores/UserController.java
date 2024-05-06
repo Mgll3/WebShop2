@@ -1,5 +1,7 @@
-package com.webshop.back.controladores;
+package com.webShop.back.controladores;
 
+import com.webShop.back.modelo.DTO.*;
+import com.webShop.back.services.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -11,9 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import com.webshop.back.modelo.DTO.*;
-import com.webshop.back.services.*;
 
 @Controller
 @RequestMapping("/v1/user")
@@ -30,7 +29,7 @@ public class UserController {
                     content = @Content(schema = @Schema(implementation = AthAnswerDTO.class)))
     })
     @GetMapping("/userSession")
-    public ResponseEntity<AthAnswerDTO> userSession(HttpServletRequest request) {
+    public ResponseEntity<?> userSession(HttpServletRequest request) {
         
         AthAnswerDTO answer = userService.getUserSession(request);
         return ResponseEntity.ok(answer);

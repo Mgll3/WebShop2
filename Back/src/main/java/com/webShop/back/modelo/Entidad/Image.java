@@ -1,4 +1,4 @@
-package com.webshop.back.modelo.Entidad;
+package com.webShop.back.modelo.Entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

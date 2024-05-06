@@ -1,15 +1,15 @@
-package com.webshop.back.services;
+package com.webShop.back.services;
 
+
+import com.webShop.back.modelo.DTO.*;
+import com.webShop.back.modelo.Entidad.*;
+import com.webShop.back.persistencia.UserRepository;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
-
-import com.webshop.back.modelo.DTO.*;
-import com.webshop.back.modelo.Entidad.*;
-import com.webshop.back.persistencia.UserRepository;
 
 
 @Service

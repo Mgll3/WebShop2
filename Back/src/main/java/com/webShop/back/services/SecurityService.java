@@ -1,17 +1,16 @@
-package com.webshop.back.services;
+package com.webShop.back.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import com.webshop.back.modelo.DTO.*;
-import com.webshop.back.security.JwtAuthenticationFilter;
-import com.webshop.back.security.JwtTokenProvider;
-
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+
+import com.webShop.back.modelo.DTO.*;
+import com.webShop.back.security.JwtAuthenticationFilter;
+import com.webShop.back.security.JwtTokenProvider;
 
 import jakarta.servlet.http.HttpServletRequest;
 
