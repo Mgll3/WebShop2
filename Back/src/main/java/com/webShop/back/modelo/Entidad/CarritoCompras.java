@@ -1,14 +1,12 @@
 package com.webShop.back.modelo.Entidad;
 
+import java.util.List;
 
+public class CarritoCompras {
 
-// public class CarritoCompras {
-//     @Getter @Setter
-//     private int id;
-//     @Getter @Setter
-//     private List<DetallePedido> items;
-//     @Getter @Setter
-//     private double precioTotal;
+    private int id;
+    private List<DetallePedido> items;
+    private double precioTotal;
 
     
-// }
+}

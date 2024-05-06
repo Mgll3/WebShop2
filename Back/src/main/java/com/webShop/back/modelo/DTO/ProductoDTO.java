@@ -14,7 +14,7 @@ public class ProductoDTO{
     @Getter
     private DetalleProductoDTO detalleProducto;
     
-    public ProductoDTO(Long id, String nombre, int precio, Image imagenPrincipal, DetalleProductoDTO detalleProducto) {
+    public ProductoDTO(Long id, String nombre, int precio, DetalleProductoDTO detalleProducto) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;

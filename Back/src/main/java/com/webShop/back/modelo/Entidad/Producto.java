@@ -42,7 +42,7 @@ public class Producto {
     }
 
     public ProductoDTO crearDto(){
-        return new ProductoDTO(this.id, this.nombre, this.precio, this.imagenPrincipal, 
+        return new ProductoDTO(this.id, this.nombre, this.precio, 
         this.detalleProducto.crearDto());
     }
 
